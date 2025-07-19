@@ -27,13 +27,17 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen bg-[#1a1a1a] text-white">
-      <Sidebar
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
-      <main className="flex-1 overflow-hidden">
-        {renderCurrentPage()}
+    <div className="layout-container bg-gray-800 text-white">
+      <div className="sidebar-container">
+        <Sidebar
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
+      <main className="main-container overflow-hidden">
+        <div className="content-wrapper">
+          {renderCurrentPage()}
+        </div>
       </main>
     </div>
   );
